@@ -4,10 +4,6 @@ const config = require('config');
 const mongoose = require('mongoose');
 const Matchday = require('../models/matchday');
 
-mongoose.connect('mongodb://localhost/top-games', { useNewUrlParser: true })
-  .then(() => console.log('Connected to MongoDB...'))
-  .catch(err => console.error('Could not connect to MongoDB...'));
-
 const header = {
   headers: {
     'X-Application': config.get('betfair.appKey'),
@@ -30,17 +26,21 @@ const body = {
     sort: 'MAXIMUM_TRADED'
 };
 
-axios.post('https://api.betfair.com/exchange/betting/rest/v1.0/listMarketCatalogue/', body, header)
-  .then(res => {
-    const output = {
-      matches: res.data
-    };
+function fetchAndSave() {
+  axios.post('https://api.betfair.com/exchange/betting/rest/v1.0/listMarketCatalogue/', body, header)
+    .then(res => {
+      const output = {
+        matches: res.data
+      };
 
-    fs.writeFile('top.json', JSON.stringify(output, null, 2), 'utf8', (err) => {
-      if (err) throw err;
-      console.log('API response has been saved.');
+      fs.writeFile('top.json', JSON.stringify(output, null, 2), 'utf8', (err) => {
+        if (err) throw err;
+        console.log('API response has been saved.');
+      });
+
+      const matchday = new Matchday(output);
+      matchday.save();
     });
+}
 
-    const matchday = new Matchday(output);
-    matchday.save();
-  });
+module.exports = fetchAndSave;

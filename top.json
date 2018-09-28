@@ -3,7 +3,7 @@
     {
       "marketId": "1.148359220",
       "marketName": "Match Odds",
-      "totalMatched": 4723889.9634,
+      "totalMatched": 8505476.0648,
       "event": {
         "id": "28913983",
         "name": "Galatasaray v Erzurum BB",
@@ -13,9 +13,21 @@
       }
     },
     {
+      "marketId": "1.148239939",
+      "marketName": "Match Odds",
+      "totalMatched": 5478851.253512,
+      "event": {
+        "id": "28909340",
+        "name": "Hertha Berlin v Bayern Munich",
+        "countryCode": "DE",
+        "timezone": "Europe/London",
+        "openDate": "2018-09-28T18:30:00.000Z"
+      }
+    },
+    {
       "marketId": "1.148356772",
       "marketName": "Match Odds",
-      "totalMatched": 3181542.0047999998,
+      "totalMatched": 5409832.487838,
       "event": {
         "id": "28913927",
         "name": "Arminia Bielefeld v FC Koln",
@@ -27,7 +39,7 @@
     {
       "marketId": "1.148237579",
       "marketName": "Match Odds",
-      "totalMatched": 2910975.3048,
+      "totalMatched": 4222336.2485299995,
       "event": {
         "id": "28909296",
         "name": "St Etienne v Monaco",
@@ -37,27 +49,15 @@
       }
     },
     {
-      "marketId": "1.148239939",
+      "marketId": "1.148356888",
       "marketName": "Match Odds",
-      "totalMatched": 2706776.5956,
+      "totalMatched": 2906882.2428319994,
       "event": {
-        "id": "28909340",
-        "name": "Hertha Berlin v Bayern Munich",
+        "id": "28913926",
+        "name": "Holstein Kiel v SV Darmstadt",
         "countryCode": "DE",
         "timezone": "Europe/London",
-        "openDate": "2018-09-28T18:30:00.000Z"
-      }
-    },
-    {
-      "marketId": "1.148297483",
-      "marketName": "Match Odds",
-      "totalMatched": 1860802.5906,
-      "event": {
-        "id": "28912151",
-        "name": "Sheff Wed v Leeds",
-        "countryCode": "GB",
-        "timezone": "Europe/London",
-        "openDate": "2018-09-28T18:45:00.000Z"
+        "openDate": "2018-09-28T16:30:00.000Z"
       }
     }
   ]

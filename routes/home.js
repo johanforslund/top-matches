@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-//const top = require('../top.json');
 const Matchday = require('../models/matchday');
 
 router.get('/', async (req, res) => {
