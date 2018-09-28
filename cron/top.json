@@ -1,0 +1,62 @@
+[
+  {
+    "marketId": "1.148237579",
+    "marketName": "Match Odds",
+    "totalMatched": 2462686.41567,
+    "event": {
+      "id": "28909296",
+      "name": "St Etienne v Monaco",
+      "countryCode": "FR",
+      "timezone": "Europe/London",
+      "openDate": "2018-09-28T18:45:00.000Z"
+    }
+  },
+  {
+    "marketId": "1.148239939",
+    "marketName": "Match Odds",
+    "totalMatched": 2297765.785975,
+    "event": {
+      "id": "28909340",
+      "name": "Hertha Berlin v Bayern Munich",
+      "countryCode": "DE",
+      "timezone": "Europe/London",
+      "openDate": "2018-09-28T18:30:00.000Z"
+    }
+  },
+  {
+    "marketId": "1.148359220",
+    "marketName": "Match Odds",
+    "totalMatched": 2094755.5730100004,
+    "event": {
+      "id": "28913983",
+      "name": "Galatasaray v Erzurum BB",
+      "countryCode": "TR",
+      "timezone": "Europe/London",
+      "openDate": "2018-09-28T17:00:00.000Z"
+    }
+  },
+  {
+    "marketId": "1.148358678",
+    "marketName": "Match Odds",
+    "totalMatched": 1518458.636891,
+    "event": {
+      "id": "28913969",
+      "name": "Porto v Tondela",
+      "countryCode": "PT",
+      "timezone": "Europe/London",
+      "openDate": "2018-09-28T19:30:00.000Z"
+    }
+  },
+  {
+    "marketId": "1.148297483",
+    "marketName": "Match Odds",
+    "totalMatched": 1507719.643398,
+    "event": {
+      "id": "28912151",
+      "name": "Sheff Wed v Leeds",
+      "countryCode": "GB",
+      "timezone": "Europe/London",
+      "openDate": "2018-09-28T18:45:00.000Z"
+    }
+  }
+]

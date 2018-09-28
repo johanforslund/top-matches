@@ -1,0 +1,6 @@
+{
+  "betfair": {
+    "appKey": "top_games_appKey",
+    "sessionToken": "top_games_sessionToken"
+  }
+}
