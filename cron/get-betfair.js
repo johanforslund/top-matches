@@ -1,6 +1,12 @@
 const axios = require('axios');
 const fs = require('fs');
 const config = require('config');
+const mongoose = require('mongoose');
+const Matchday = require('../models/matchday');
+
+mongoose.connect('mongodb://localhost/top-games', { useNewUrlParser: true })
+  .then(() => console.log('Connected to MongoDB...'))
+  .catch(err => console.error('Could not connect to MongoDB...'));
 
 const header = {
   headers: {
@@ -26,8 +32,15 @@ const body = {
 
 axios.post('https://api.betfair.com/exchange/betting/rest/v1.0/listMarketCatalogue/', body, header)
   .then(res => {
-    fs.writeFile('top.json', JSON.stringify(res.data, null, 2), 'utf8', (err) => {
+    const output = {
+      matches: res.data
+    };
+
+    fs.writeFile('top.json', JSON.stringify(output, null, 2), 'utf8', (err) => {
       if (err) throw err;
       console.log('API response has been saved.');
     });
+
+    const matchday = new Matchday(output);
+    matchday.save();
   });
