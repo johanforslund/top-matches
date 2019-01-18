@@ -1,13 +1,13 @@
 const axios = require('axios');
 const fs = require('fs');
-const config = require('config');
 const mongoose = require('mongoose');
 const Matchday = require('../models/matchday');
+const keys = require('../config/keys');
 
 const header = {
   headers: {
-    'X-Application': config.get('betfair.appKey'),
-    'X-Authentication': config.get('betfair.sessionToken'),
+    'X-Application': keys.betfairAppKey,
+    'X-Authentication': keys.betfairSessionToken,
     Accept: 'application/json'
   }
 };
@@ -17,8 +17,8 @@ const body = {
     	eventTypeIds: [1],
     	marketTypeCodes: ['MATCH_ODDS'],
     	marketStartTime: {
-    		from: '2018-09-28T00:00:00Z',
-    		to: '2018-09-28T23:59:00Z'
+    		from: '2019-01-20T00:00:00Z',
+    		to: '2019-01-20T23:59:00Z'
     	}
     },
     maxResults: 5,
