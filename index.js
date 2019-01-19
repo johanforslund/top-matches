@@ -3,13 +3,16 @@ const mongoose = require('mongoose');
 const schedule = require('node-schedule');
 const app = express();
 const home = require('./routes/home');
-const fetchAndSave = require('./cron/get-betfair');
+const fetchAndSave = require('./cron/get-data');
 const keys = require('./config/keys');
 
 //Run cron job every midnight
 schedule.scheduleJob('0 0 0 * * *', function(){
   fetchAndSave();
 });
+
+fetchAndSave();
+
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
   .then(() => console.log('Connected to MongoDB...'))

@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Matchday = require('../models/matchday');
+const Match = require('../models/match');
 
 router.get('/', async (req, res) => {
-  const matchday = await Matchday.findOne();
+  const match = await Match.findOne();
 
-  res.send(matchday);
+  res.send(match);
 });
 
 module.exports = router;
